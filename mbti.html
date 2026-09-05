@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제품소개 | 팜이오</title>
+    <title>농사 MBTI | 팜이오</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mbti.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -14,24 +15,39 @@
         <div class="container header-content">
             <a href="index.html" class="logo"><img src="Image/logo.svg" alt="FarmIO 로고"></a>
             <nav class="nav">
-                <a href="brand.html">브랜드 설명</a>
+                <a href="brand.html" >브랜드 설명</a>
                 <a href="about.html">팜이오 소개</a>
-                <a href="products.html" class="active">제품소개</a>
+                <a href="products.html">제품소개</a>
                 <a href="bathhouse.html">의흥목욕탕</a>
-            <a href="mbti.html">농사 MBTI</a>
+            <a href="mbti.html" class="active">농사 MBTI</a>
             </nav>
         </div>
     </header>
 
     <main>
         <div class="sub-hero"></div>
-
-        <div style="min-height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 20px;">
-            <div style="font-size: 4rem; margin-bottom: 20px;">🚧</div>
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary); font-weight: 700;">페이지 준비중입니다</h2>
-            <p style="color: #666; font-size: 1.1rem; line-height: 1.6;">더 유익하고 알찬 콘텐츠를 제공하기 위해 준비 중입니다.<br>빠른 시일 내에 찾아뵙겠습니다.</p>
-        </div>
-    
+        
+        <section class="section mbti-form-section">
+            <div class="container">
+                <div class="section-header text-center fade-up mbti-header-custom">
+                    <div class="mbti-badge">FARMING MBTI</div>
+                    <h2 class="section-main-title">농사 성향 테스트</h2>
+                    <p class="section-subtitle">나는 어떤 농사꾼일까? 재미로 알아보는 농업 MBTI</p>
+                </div>
+                
+                <div id="mbti-question-list" class="mbti-list">
+                    <!-- 질문 리스트 동적 렌더링 -->
+                </div>
+                
+                <div id="submit-container" class="text-center" style="margin-top: 40px; margin-bottom: 60px;">
+                    <button id="submit-btn" class="mbti-outline-btn">결과 보기</button>
+                </div>
+                
+                <div id="mbti-result-area" class="mbti-result-area" style="display: none;">
+                    <!-- 결과 내용 동적 렌더링 -->
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -87,5 +103,6 @@
     </footer>
     <button id="scrollToTopBtn" class="scroll-to-top" aria-label="최상단으로 이동">&uarr;</button>
     <script src="script.js"></script>
+<script src="mbti.js"></script>
 </body>
 </html>

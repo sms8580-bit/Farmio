@@ -1,0 +1,201 @@
+
+.mbti-form-section {
+    padding: 80px 0;
+    background-color: #f9fdfa;
+}
+.mbti-question-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+    
+    
+    text-align: center;
+}
+.mbti-q-title {
+    font-size: 1.3rem;
+    color: var(--dark);
+    margin-bottom: 40px;
+    font-weight: 700;
+    word-break: keep-all;
+    line-height: 1.5;
+}
+
+/* 7-point Scale UI */
+.mbti-scale-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+.scale-label {
+    font-size: 1.3rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.scale-label.agree {
+    color: #33a474;
+}
+.scale-label.disagree {
+    color: #88619a;
+}
+.scale-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.scale-options input[type="radio"] {
+    display: none;
+}
+.scale-btn {
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: transparent;
+}
+.scale-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Sizes */
+.agree-3, .disagree-3 { width: 75px; height: 75px; border-width: 4px; }
+.agree-2, .disagree-2 { width: 60px; height: 60px; border-width: 3px; }
+.agree-1, .disagree-1 { width: 45px; height: 45px; border-width: 3px; }
+.neutral { width: 35px; height: 35px; border-width: 2px; }
+
+/* Colors (Borders) */
+.agree-3, .agree-2, .agree-1 { border-style: solid; border-color: #33a474; }
+.neutral { border-style: solid; border-color: #949a9e; }
+.disagree-3, .disagree-2, .disagree-1 { border-style: solid; border-color: #88619a; }
+
+/* Colors (Checked Fill) */
+input[type="radio"]:checked + .agree-3,
+input[type="radio"]:checked + .agree-2,
+input[type="radio"]:checked + .agree-1 {
+    background-color: #33a474;
+}
+input[type="radio"]:checked + .neutral {
+    background-color: #949a9e;
+}
+input[type="radio"]:checked + .disagree-3,
+input[type="radio"]:checked + .disagree-2,
+input[type="radio"]:checked + .disagree-1 {
+    background-color: #88619a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mbti-scale-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .scale-options {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .agree-3, .disagree-3 { width: 55px; height: 55px; }
+    .agree-2, .disagree-2 { width: 45px; height: 45px; }
+    .agree-1, .disagree-1 { width: 35px; height: 35px; }
+    .neutral { width: 30px; height: 30px; }
+}
+
+
+.mbti-result-area {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 2px dashed #ddd;
+    text-align: center;
+    animation: fadeIn 0.6s ease forwards;
+}
+.result-type-label {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+.result-title {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+.result-desc {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    text-align: left;
+}
+.result-desc strong {
+    color: var(--dark);
+    font-size: 1.25rem;
+}
+
+@keyframes fadeIn {
+    from {  transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Custom Header Styles */
+.mbti-header-custom {
+    margin-bottom: 60px;
+}
+.mbti-badge {
+    display: inline-block;
+    background-color: #e5f6ed;
+    color: #33a474;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 8px 24px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+.mbti-header-custom .section-main-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+.mbti-header-custom .section-subtitle {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+
+/* Sequential Revealing Styles Removed */
+
+/* Outline Button */
+.mbti-outline-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 15px 50px !important;
+    border: 2px solid #222 !important;
+    border-radius: 50px !important;
+    background-color: #fff !important;
+    color: #222 !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    width: auto !important;
+    min-width: 200px !important;
+}
+.mbti-outline-btn:hover {
+    background-color: #ffee51 !important;
+    border-color: #ffee51 !important;
+    color: #1F2321 !important;
+}
