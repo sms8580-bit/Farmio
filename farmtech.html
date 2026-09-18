@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARM TECH | 팜이오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Noto+Sans+KR:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header transparent-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><img src="Image/logo.svg" alt="FarmIO 로고"></a>
+            <nav class="nav">
+                <a href="farmio.html">FarmIO</a>
+                <a href="farmtech.html" class="active">FARM TECH</a>
+                <a href="farmlife.html">FARM LIFE</a>
+                <a href="bathhouse.html">FarmIO X 의흥목욕탕</a>
+                <a href="farmtalk.html">FARM TALK</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="sub-hero sub-hero-farmtech" style="--bg-img: url('Image/farmtech/product.webp');">
+            <div class="container">
+                <div class="hero-text">
+                    <p class="hero-sub-title">농업의 문제를 기술로 해결</p>
+                    <h1 class="hero-main-title">FARM <strong>TECH</strong></h1>
+                    <p class="hero-desc">
+                        재배환경부터 농업기계, 주행제어까지<br>
+                        현장에서 필요한 기술을 만들고 연결합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 서브 카테고리 탭 네비게이션 -->
+        <nav class="sub-category-bar">
+            <div class="container sub-category-container">
+                <a href="#product" class="sub-category-item active">PRODUCT</a>
+                <a href="#rd-project" class="sub-category-item">R&D / Project</a>
+            </div>
+        </nav>
+
+        <!-- 1. PRODUCT 탭 영역 -->
+        <div id="product" class="tab-content-area tab-active">
+            <!-- Our Technology Section -->
+            <section class="tech-overview-section">
+                <div class="container">
+                    <div class="tech-overview-grid">
+                        <!-- Left Column: Header Text -->
+                        <div class="tech-overview-left fade-right">
+                            <div class="tech-sub">
+                                <span>OUR TECHNOLOGY</span>
+                                <span class="sub-line"></span>
+                            </div>
+                            <h2 class="tech-title">
+                                농업의 시작부터 현장까지, 4개의 기술로 연결합니다
+                            </h2>
+                            <p class="tech-desc">
+                                팜이오는 재배, 광환경, 농작업, 주행제어를<br>
+                                아우르는 기술로 더 나은 농업의 미래를 만듭니다.
+                            </p>
+                        </div>
+
+                        <!-- Right Column: 4 Tech Cards -->
+                        <div class="tech-overview-right">
+                            <div class="tech-cards-grid">
+                                <!-- Card 1 -->
+                                <div class="tech-card fade-up delay-1">
+                                    <div class="tech-card-img">
+                                        <img src="Image/produtcs/mini-cultivator.webp" alt="SMART GROWING">
+                                    </div>
+                                    <div class="tech-card-body">
+                                        <div class="tech-card-header">
+                                            <h3 class="tech-card-title">SMART GROWING</h3>
+                                            <span class="tech-card-sub">Controlled Agriculture</span>
+                                        </div>
+                                        <p class="tech-card-desc">환경제어 기반 스마트<br>재배</p>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="tech-card fade-up delay-2">
+                                    <div class="tech-card-img">
+                                        <img src="Image/produtcs/multi-cultivator.webp" alt="GROW LIGHT">
+                                    </div>
+                                    <div class="tech-card-body">
+                                        <div class="tech-card-header">
+                                            <h3 class="tech-card-title">GROW LIGHT</h3>
+                                            <span class="tech-card-sub">Plant Lighting</span>
+                                        </div>
+                                        <p class="tech-card-desc">식물 생리반응 기반<br>생물생장등</p>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="tech-card fade-up delay-3">
+                                    <div class="tech-card-img">
+                                        <img src="Image/produtcs/ev-platform.webp" alt="FarmX">
+                                    </div>
+                                    <div class="tech-card-body">
+                                        <div class="tech-card-header">
+                                            <h3 class="tech-card-title">FarmX</h3>
+                                            <span class="tech-card-sub">Electric Farm Platform</span>
+                                        </div>
+                                        <p class="tech-card-desc">확장형 다목적 전동운반<br>플랫폼</p>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4 -->
+                                <div class="tech-card fade-up delay-4">
+                                    <div class="tech-card-img">
+                                        <img src="Image/produtcs/onna.webp" alt="ON나">
+                                    </div>
+                                    <div class="tech-card-body">
+                                        <div class="tech-card-header">
+                                            <h3 class="tech-card-title">ON나</h3>
+                                            <span class="tech-card-sub">Driving Control System</span>
+                                        </div>
+                                        <p class="tech-card-desc">피지컬 AI 기반 통합<br>주행제어 시스템</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Tech Product Showcase Blocks -->
+            <section class="tech-detail-showcase-section">
+                <!-- Block 1: SMART GROWING -->
+                <div class="tech-detail-block tech-block-1" style="background-image: url('Image/farmtech/1.jpg');">
+                    <div class="tech-block-overlay"></div>
+                    <div class="container tech-block-container">
+                        <div class="tech-block-left fade-right">
+                            <div class="tech-block-num-wrap">
+                                <span class="tech-block-num">01</span>
+                                <span class="tech-block-name">SMART GROWING</span>
+                            </div>
+                            <h3 class="tech-block-title">
+                                작물이 원하는<br>
+                                환경을 만듭니다
+                            </h3>
+                            <p class="tech-block-desc">
+                                식물공장, 버섯재배사 등 외부 환경의 영향을 최소화하고<br>
+                                온도·습도·광환경 등 생육조건을 제어하는 스마트 재배시스템으로<br>
+                                컨테이너형부터 시설형까지 생산목적에 맞는 재배환경을 설계합니다.
+                            </p>
+                            <div class="tech-block-tags">
+                                <span class="tech-tag">환경제어</span>
+                                <span class="tech-tag">다단재배</span>
+                                <span class="tech-tag">밀폐재배</span>
+                                <span class="tech-tag">모듈형</span>
+                                <span class="tech-tag">연중생산</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 2: GROW LIGHT -->
+                <div class="tech-detail-block tech-block-2" style="background-image: url('Image/farmtech/2.jpg');">
+                    <div class="tech-block-overlay"></div>
+                    <div class="container tech-block-container">
+                        <div class="tech-block-left fade-right">
+                            <div class="tech-block-num-wrap">
+                                <span class="tech-block-num">02</span>
+                                <span class="tech-block-name">GROW LIGHT</span>
+                            </div>
+                            <h3 class="tech-block-title">
+                                단순히 밝히는 빛이 아닌<br>
+                                생육을 설계하는 빛
+                            </h3>
+                            <p class="tech-block-desc">
+                                식물의 생리반응을 기반으로 작물과 생육단계에 적합한<br>
+                                파장과 광량을 제어하는 농업용 생물생장등 및 광환경 제어기술로<br>
+                                데이터 기반의 최적화된 빛으로 작물의 가능성을 더욱 끌어올립니다.
+                            </p>
+                            <div class="tech-block-tags">
+                                <span class="tech-tag">생리반응</span>
+                                <span class="tech-tag">파장제어</span>
+                                <span class="tech-tag">광량제어</span>
+                                <span class="tech-tag">생육최적화</span>
+                                <span class="tech-tag">재배데이터</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 3: FarmX -->
+                <div class="tech-detail-block tech-block-3" style="background-image: url('Image/farmtech/3.jpg');">
+                    <div class="tech-block-overlay"></div>
+                    <div class="container tech-block-container">
+                        <div class="tech-block-left fade-right">
+                            <div class="tech-block-num-wrap">
+                                <span class="tech-block-num">03</span>
+                                <span class="tech-block-name">FarmX</span>
+                            </div>
+                            <h3 class="tech-block-title">
+                                운반을 넘어<br>
+                                농작업 플랫폼으로
+                            </h3>
+                            <p class="tech-block-desc">
+                                궤도형 전동구동 시스템을 기반으로 농산물과 농자재의 적재·운반을<br>
+                                지원하는 확장형 다목적 전동운반 플랫폼으로 리프트·덤프 기능은 물론,<br>
+                                다양한 농작업 장치를 결합할 수 있도록 확장성을 고려하여 개발되었습니다.
+                            </p>
+                            <div class="tech-block-tags">
+                                <span class="tech-tag">전동구동</span>
+                                <span class="tech-tag">궤도주행</span>
+                                <span class="tech-tag">적재·운반</span>
+                                <span class="tech-tag">리프트·덤프</span>
+                                <span class="tech-tag">확장형 플랫폼</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 4: ON나 -->
+                <div class="tech-detail-block tech-block-4" style="background-image: url('Image/farmtech/4.jpg');">
+                    <div class="tech-block-overlay"></div>
+                    <div class="container tech-block-container">
+                        <div class="tech-block-left fade-right">
+                            <div class="tech-block-num-wrap">
+                                <span class="tech-block-num">04</span>
+                                <span class="tech-block-name">ON나</span>
+                            </div>
+                            <h3 class="tech-block-title">
+                                농기계에 움직임을 더하다
+                            </h3>
+                            <p class="tech-block-subtitle">피지컬 AI 기반 통합 주행제어 시스템</p>
+                            <p class="tech-block-desc">
+                                농기계의 주행·조향·제어기술을 하나로 통합하여 작업자의 부담을 줄이고<br>
+                                보다 쉽고 안전한 농작업을 지원하며 다양한 농업용 이동 플랫폼에<br>
+                                적용 가능한 확장형 주행제어 기술입니다.
+                            </p>
+                            <div class="tech-block-tags">
+                                <span class="tech-tag">주행제어</span>
+                                <span class="tech-tag">조향제어</span>
+                                <span class="tech-tag">원격제어</span>
+                                <span class="tech-tag">센서연계</span>
+                                <span class="tech-tag">피지컬 AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 5: Summary Banner -->
+                <div class="tech-detail-block tech-block-5"
+                    style="background-image: url('Image/farmtech/product_5_5.webp');">
+                    <div class="tech-block-overlay"></div>
+                    <div class="container tech-block-container">
+                        <div class="tech-block-left fade-right">
+                            <h3 class="tech-block-title">
+                                재배하는 기술에서<br>
+                                움직이는 기술까지
+                            </h3>
+                            <p class="tech-block-subtitle">기술이 연결되면, 농업의 가능성은 더 커집니다.</p>
+                            <div class="tech-block-desc">
+                                Technology for Better Farming.<br>
+                                Farm A to Z, FarmIO.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 2. R&D / Project 탭 영역 -->
+        <div id="rd-project" class="tab-content-area" style="display: none;">
+            <section class="value-chain-section rd-process-section">
+                <div class="container">
+                    <!-- Top Header Bar (A to Z Style Header line) -->
+                    <div class="value-chain-header fade-up">
+                        <div class="value-chain-sub">
+                            <span class="sub-line left-line"></span>
+                            <span>R&amp;D PROCESS</span>
+                            <span class="sub-line right-line"></span>
+                        </div>
+                        <h2 class="value-chain-title">
+                            기술은 현장에서 시작합니다.
+                        </h2>
+                        <p class="value-chain-desc">
+                            팜이오의 연구개발은 기술 자체를 만드는 것보다 농업 현장의 문제를 해결하는 것에서 시작합니다.
+                        </p>
+                    </div>
+
+                    <!-- Flow Steps (7 Steps) -->
+                    <div class="value-chain-content fade-up delay-1">
+                        <div class="value-chain-steps rd-process-steps">
+                            <!-- Step 01 -->
+                            <div class="step-item fade-right delay-1">
+                                <div class="rd-step-num">01</div>
+                                <div class="step-title">FIELD</div>
+                                <div class="step-desc">
+                                    현장 문제 발견
+                                </div>
+                            </div>
+
+                            <!-- Step 02 -->
+                            <div class="step-item fade-right delay-2">
+                                <div class="rd-step-num">02</div>
+                                <div class="step-title">RESEARCH</div>
+                                <div class="step-desc">
+                                    문제 분석·연구
+                                </div>
+                            </div>
+
+                            <!-- Step 03 -->
+                            <div class="step-item fade-right delay-3">
+                                <div class="rd-step-num">03</div>
+                                <div class="step-title">DEVELOPMENT</div>
+                                <div class="step-desc">
+                                    설계·기술개발
+                                </div>
+                            </div>
+
+                            <!-- Step 04 -->
+                            <div class="step-item fade-right delay-4">
+                                <div class="rd-step-num">04</div>
+                                <div class="step-title">PROTOTYPE</div>
+                                <div class="step-desc">
+                                    시제품 제작
+                                </div>
+                            </div>
+
+                            <!-- Step 05 -->
+                            <div class="step-item fade-right delay-5">
+                                <div class="rd-step-num">05</div>
+                                <div class="step-title">FIELD TEST</div>
+                                <div class="step-desc">
+                                    현장실증
+                                </div>
+                            </div>
+
+                            <!-- Step 06 -->
+                            <div class="step-item fade-right delay-6">
+                                <div class="rd-step-num">06</div>
+                                <div class="step-title">IMPROVEMENT</div>
+                                <div class="step-desc">
+                                    개선·고도화
+                                </div>
+                            </div>
+
+                            <!-- Step 07 -->
+                            <div class="step-item fade-right delay-7">
+                                <div class="rd-step-num">07</div>
+                                <div class="step-title">BUSINESS</div>
+                                <div class="step-desc">
+                                    제품화·사업화
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Cards Section -->
+            <section class="project-cards-section">
+                <div class="container">
+                    <div class="project-header fade-up">
+                        <div class="project-header-left">
+                            <div class="value-chain-sub">
+                                <span>PROJECT</span>
+                                <span class="sub-line right-line"></span>
+                            </div>
+                            <h2 class="project-title">팜이오가 만들어가고 있는 기술</h2>
+                            <p class="project-desc">지금도, 더 나은 농업을 위한 다양한 연구개발이 진행되고 있습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-grid fade-up delay-1">
+                        <!-- Card 1 -->
+                        <div class="project-card">
+                            <div class="project-card-img">
+                                <img src="Image/farmtech/1.jpg" alt="Smart Growing">
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-card-title">Smart Growing</h3>
+                                <p class="project-card-subtitle">컨테이너 기반 스마트 재배시스템<br>개발 및 실증</p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag">식물공장</span>
+                                    <span class="project-tag">환경제어</span>
+                                    <span class="project-tag">스마트재배</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="project-card">
+                            <div class="project-card-img">
+                                <img src="Image/farmtech/2.jpg" alt="Grow Light R&D">
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-card-title">Grow Light R&amp;D</h3>
+                                <p class="project-card-subtitle">식물 생리반응 기반 생물생장등<br>및 광환경 연구</p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag">LED</span>
+                                    <span class="project-tag">광환경</span>
+                                    <span class="project-tag">생리반응</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="project-card">
+                            <div class="project-card-img">
+                                <img src="Image/farmtech/3.jpg" alt="FarmX Development">
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-card-title">FarmX Development</h3>
+                                <p class="project-card-subtitle">확장형 다목적 전동운반 플랫폼<br>개발</p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag">농업기계</span>
+                                    <span class="project-tag">전동화</span>
+                                    <span class="project-tag">현장실증</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="project-card">
+                            <div class="project-card-img">
+                                <img src="Image/farmtech/4.jpg" alt="ON나 Development">
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-card-title">ON나 Development</h3>
+                                <p class="project-card-subtitle">피지컬 AI 기반 통합 주행제어<br>시스템 개발</p>
+                                <div class="project-card-tags">
+                                    <span class="project-tag">주행제어</span>
+                                    <span class="project-tag">AI</span>
+                                    <span class="project-tag">자율주행</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OUR R&D FIELD Section (White Background) -->
+            <section class="rd-field-section">
+                <div class="container">
+                    <div class="rd-field-grid fade-up">
+                        <!-- Left Header -->
+                        <div class="rd-field-header">
+                            <div class="value-chain-sub">
+                                <span>OUR R&amp;D FIELD</span>
+                                <span class="sub-line right-line"></span>
+                            </div>
+                            <h2 class="rd-field-title">
+                                농업 문제의 해결을 위한<br>팜이오의 연구영역
+                            </h2>
+                            <p class="rd-field-desc">
+                                재배에서 운반, 제어까지<br>
+                                농업의 전 과정을 기술로 연결합니다.
+                            </p>
+                        </div>
+
+                        <!-- Right 4 Columns with Vertical Dividers -->
+                        <div class="rd-field-cols">
+                            <!-- Col 1 -->
+                            <div class="rd-field-col">
+                                <h3 class="field-col-title">SMART GROWING</h3>
+                                <p class="field-col-desc">
+                                    환경제어·스마트재배<br>
+                                    시설농업
+                                </p>
+                            </div>
+
+                            <!-- Col 2 -->
+                            <div class="rd-field-col">
+                                <h3 class="field-col-title">GROW LIGHT</h3>
+                                <p class="field-col-desc">
+                                    식물 생리반응·LED<br>
+                                    광환경 제어
+                                </p>
+                            </div>
+
+                            <!-- Col 3 -->
+                            <div class="rd-field-col">
+                                <h3 class="field-col-title">FARM MACHINERY</h3>
+                                <p class="field-col-desc">
+                                    전동화·농작업 기계<br>
+                                    작업 플랫폼
+                                </p>
+                            </div>
+
+                            <!-- Col 4 -->
+                            <div class="rd-field-col">
+                                <h3 class="field-col-title">PHYSICAL AI</h3>
+                                <p class="field-col-desc">
+                                    주행제어·센서<br>
+                                    농업기계 지능화
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- R&D Summary Banner Section -->
+            <section class="rd-banner-section" style="--bg-img: url('Image/farmtech/RD_4.webp');">
+                <div class="rd-banner-overlay"></div>
+                <div class="container rd-banner-container">
+                    <!-- Left Side Content -->
+                    <div class="rd-banner-left fade-right">
+                        <h2 class="rd-banner-title">
+                            연구실에서 끝나는 기술이 아닌,<br>
+                            현장에서 작동하는 기술
+                        </h2>
+                        <p class="rd-banner-subtitle">
+                            농업인이 실제로 사용하는 순간까지<br>
+                            팜이오의 연구개발은 끝나지 않습니다.
+                        </p>
+                        <div class="rd-banner-divider"></div>
+                        <div class="rd-banner-subtext">
+                            From Field to Technology.<br>
+                            From Technology to Field.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="footer-info">
+                    <p>상호 : 팜이오 <span class="divider">|</span> 대표자명 : 고은아</p>
+                    <p>사업자등록번호 : 000-00-00000 <span class="divider">|</span> 통신판매업신고번호 : 제0000-군위-0000호</p>
+                    <p>연락처 : 00-000-0000 <span class="divider">|</span> 팩스 : 000-0000-0000 <span
+                            class="divider">|</span> 이메일 : info@farmio.com</p>
+                    <p>주소 : 대구광역시 군위군 의흥면 읍내5길 23</p>
+                </div>
+                <div class="footer-copyright">
+                    Copyright &copy; 2026 Farmio. All rights reserved.
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="farmio.html">FarmIO</a></li>
+                        <li><a href="farmtech.html">FARM TECH</a></li>
+                        <li><a href="farmlife.html">FARM LIFE</a></li>
+                        <li><a href="bathhouse.html">FarmIO X 의흥목욕탕</a></li>
+                        <li><a href="farmtalk.html">FARM TALK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                        </svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.557z" />
+                        </svg></a>
+                    <a href="#" aria-label="Blog"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M3 3h18a2 2 0 012 2v12a2 2 0 01-2 2h-4l-5 5v-5H3a2 2 0 01-2-2V5a2 2 0 012-2zm3 6v2h12V9H6zm0 4v2h8v-2H6z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="최상단으로 이동">&uarr;</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

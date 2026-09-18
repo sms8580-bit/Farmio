@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARM TALK | 팜이오</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="farmtalk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header transparent-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><img src="Image/logo.svg" alt="FarmIO 로고"></a>
+            <nav class="nav">
+                <a href="farmio.html">FarmIO</a>
+                <a href="farmtech.html">FARM TECH</a>
+                <a href="farmlife.html">FARM LIFE</a>
+                <a href="bathhouse.html">FarmIO X 의흥목욕탕</a>
+                <a href="farmtalk.html" class="active">FARM TALK</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <div class="sub-hero sub-hero-farmtalk" style="--bg-img: url('Image/farmtalk/farmtalk.webp');">
+            <div class="container">
+                <div class="hero-text">
+                    <p class="hero-sub-title">소통과 정보가 함께 나누어지는 공간</p>
+                    <h1 class="hero-main-title">FARM <strong>TALK</strong></h1>
+                    <p class="hero-desc">
+                        농업인과 도시민이 자유롭게 이야기를 나누고<br>
+                        노하우와 후기를 공유하는 <span class="highlight">팜이오 커뮤니티</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Board Section -->
+        <section class="section board-section">
+            <div class="container">
+                <!-- Board Top Bar: Category Tabs & Search/Write -->
+                <div class="board-header-bar">
+                    <div class="board-category-tabs">
+                        <button type="button" class="board-cat-btn active">전체</button>
+                        <button type="button" class="board-cat-btn">공지</button>
+                        <button type="button" class="board-cat-btn">문의</button>
+                        <button type="button" class="board-cat-btn">체험후기</button>
+                    </div>
+
+                    <div class="board-tools">
+                        <div class="board-search-box">
+                            <input type="text" class="board-search-input" placeholder="제목, 내용, 작성자 검색">
+                            <button type="button" class="board-search-btn" aria-label="검색">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <button type="button" id="btnAdminLogin" class="btn-secondary" style="margin-right:10px;">관리자
+                            인증</button>
+                        <a href="#" class="board-write-btn">
+                            글쓰기
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Board Table -->
+                <div class="board-table-wrapper">
+                    <table class="board-table">
+                        <thead>
+                            <tr>
+                                <th class="col-num">번호</th>
+                                <th class="col-cat">카테고리</th>
+                                <th class="col-title">제목</th>
+                                <th class="col-author">작성자</th>
+                                <th class="col-date">작성일</th>
+                                <th class="col-views">조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6">
+                                    등록된 게시글이 없습니다. 첫 번째 글을 작성해보세요!
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="board-pagination">
+                    <a href="#" class="page-link" aria-label="이전 페이지">&lt;</a>
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link" aria-label="다음 페이지">&gt;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- 비밀번호 입력 모달 -->
+    <div id="passwordModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">🔒 비밀번호 확인</h3>
+                <button type="button" class="modal-close-btn" id="closePasswordModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="passwordModalMessage">비밀번호를 입력해주세요.</p>
+                <input type="password" id="passwordModalInput" placeholder="비밀번호 입력">
+                <p id="passwordModalError">비밀번호가 일치하지 않습니다.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="cancelPasswordModal">취소</button>
+                <button type="button" class="btn-primary" id="confirmPasswordModal">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. 글쓰기 모달 -->
+    <div id="writeModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">새 글 작성</h3>
+                <button type="button" class="modal-close-btn" id="closeWriteModal">&times;</button>
+            </div>
+            <form id="writeForm">
+                <div class="modal-body">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="postCategory">카테고리</label>
+                            <input type="hidden" id="postCategory" value="문의">
+                            <div class="custom-select-wrapper" id="customCategorySelect">
+                                <div class="custom-select-trigger">
+                                    <span class="custom-select-text">문의</span>
+                                    <svg viewBox="0 0 24 24" class="custom-select-arrow">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="custom-select-options">
+                                    <div class="custom-option" data-value="공지">공지</div>
+                                    <div class="custom-option selected" data-value="문의">문의</div>
+                                    <div class="custom-option" data-value="체험후기">체험후기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" id="authorInputGroup">
+                            <label for="postAuthor">작성자 성명</label>
+                            <input type="text" id="postAuthor" placeholder="예: 김성민 (김** 익명 표시)" required>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <div class="form-group" id="passwordInputGroup">
+                            <label for="postPassword">비밀번호 (수정/삭제용)</label>
+                            <input type="password" id="postPassword" placeholder="4자리 이상 입력" required>
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <div class="secret-box-wrapper">
+                                <div class="secret-checkbox-group">
+                                    <input type="checkbox" id="postIsSecret">
+                                    <label for="postIsSecret">비밀글 설정</label>
+                                </div>
+                                <span class="secret-desc">※ 비밀글 설정 시 작성자와 관리자만 볼 수 있습니다.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="postTitle">제목</label>
+                        <input type="text" id="postTitle" placeholder="제목을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postContent">내용</label>
+                        <textarea id="postContent" rows="5" placeholder="내용을 입력해 주세요." required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" id="cancelWriteModal">취소</button>
+                    <button type="submit" class="btn-primary">작성완료</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. 글 상세보기 모달 -->
+    <div id="detailModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="detailTitle">게시글 제목</h3>
+                <button type="button" class="modal-close-btn" id="closeDetailModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-meta">
+                    <span>카테고리: <strong id="detailCategory">문의</strong></span>
+                    <span>작성자: <strong id="detailAuthor">김**</strong></span>
+                    <span>작성일: <span id="detailDate">2026.09.18</span></span>
+                    <span>조회수: <span id="detailViews">1</span></span>
+                </div>
+                <div class="detail-content" id="detailContent">게시글 본문 내용입니다.</div>
+
+                <!-- 댓글 섹션 -->
+                <div class="comments-section">
+                    <h4>💬 댓글 <span id="commentCount">(0)</span></h4>
+
+                    <div id="commentsList" class="comments-list">
+                        <!-- 댓글 리스트 동적 렌더링 -->
+                    </div>
+
+                    <form id="commentForm">
+                        <div id="commentAuthGroup">
+                            <input type="text" id="commentAuthor" placeholder="작성자 이름" required>
+                        </div>
+                        <input type="text" id="commentText" placeholder="댓글을 남겨보세요..." required>
+                        <button type="submit" class="btn-primary">등록</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" class="btn-secondary" id="btnEditPost">수정</button>
+                    <button type="button" class="btn-secondary" id="btnDeletePost">삭제</button>
+                </div>
+                <button type="button" class="btn-primary" id="confirmDetailModal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="footer-info">
+                    <p>상호 : 팜이오 <span class="divider">|</span> 대표자명 : 고은아</p>
+                    <p>사업자등록번호 : 000-00-00000 <span class="divider">|</span> 통신판매업신고번호 : 제0000-군위-0000호</p>
+                    <p>연락처 : 00-000-0000 <span class="divider">|</span> 팩스 : 000-0000-0000 <span
+                            class="divider">|</span> 이메일 : info@farmio.com</p>
+                    <p>주소 : 대구광역시 군위군 의흥면 읍내5길 23</p>
+                </div>
+                <div class="footer-copyright">
+                    Copyright &copy; 2026 Farmio. All rights reserved.
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="farmio.html">FarmIO</a></li>
+                        <li><a href="farmtech.html">FARM TECH</a></li>
+                        <li><a href="farmlife.html">FARM LIFE</a></li>
+                        <li><a href="bathhouse.html">FarmIO X 의흥목욕탕</a></li>
+                        <li><a href="farmtalk.html">FARM TALK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                        </svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.557z" />
+                        </svg></a>
+                    <a href="#" aria-label="Blog"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M3 3h18a2 2 0 012 2v12a2 2 0 01-2 2h-4l-5 5v-5H3a2 2 0 01-2-2V5a2 2 0 012-2zm3 6v2h12V9H6zm0 4v2h8v-2H6z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="최상단으로 이동">&uarr;</button>
+    <script src="script.js"></script>
+    <script src="farmtalk.js"></script>
+</body>
+
+</html>

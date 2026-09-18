@@ -1,37 +1,103 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제품소개 | 팜이오</title>
+    <title>FARM LIFE | 팜이오</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="farmtalk.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="header transparent-header">
         <div class="container header-content">
             <a href="index.html" class="logo"><img src="Image/logo.svg" alt="FarmIO 로고"></a>
             <nav class="nav">
-                <a href="brand.html">브랜드 설명</a>
-                <a href="about.html">팜이오 소개</a>
-                <a href="products.html" class="active">제품소개</a>
-                <a href="bathhouse.html">의흥목욕탕</a>
-            <a href="mbti.html">농사 MBTI</a>
+                <a href="farmio.html">FarmIO</a>
+                <a href="farmtech.html">FARM TECH</a>
+                <a href="farmlife.html" class="active">FARM LIFE</a>
+                <a href="bathhouse.html">FarmIO X 의흥목욕탕</a>
+                <a href="farmtalk.html">FARM TALK</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <div class="sub-hero"></div>
-
-        <div style="min-height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 20px;">
-            <div style="font-size: 4rem; margin-bottom: 20px;">🚧</div>
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary); font-weight: 700;">페이지 준비중입니다</h2>
-            <p style="color: #666; font-size: 1.1rem; line-height: 1.6;">더 유익하고 알찬 콘텐츠를 제공하기 위해 준비 중입니다.<br>빠른 시일 내에 찾아뵙겠습니다.</p>
+        <div class="sub-hero sub-hero-farmlife" style="--bg-img: url('Image/farmlife/farmlife.webp');">
+            <div class="container">
+                <div class="hero-text">
+                    <p class="hero-sub-title">자연과 사람이 함께하는 농촌 문화</p>
+                    <h1 class="hero-main-title">FARM <strong>LIFE</strong></h1>
+                    <p class="hero-desc">
+                        농업의 가치를 나누고,<br>
+                        농촌의 매력을 만나는 곳 <span class="highlight">팜이오</span>
+                    </p>
+                </div>
+            </div>
         </div>
-    
+
+        <!-- 서브 카테고리 탭 네비게이션 -->
+        <nav class="sub-category-bar">
+            <div class="container sub-category-container">
+                <a href="#mbti-test" class="sub-category-item active">농사 성향 MBTI</a>
+                <a href="#crop-test" class="sub-category-item">나의 작물 찾기</a>
+            </div>
+        </nav>
+
+        <!-- 1. 농사 성향 MBTI 탭 영역 -->
+        <div id="mbti-test" class="tab-content-area tab-active">
+            <section class="section farmtalk-form-section">
+                <div class="container">
+                    <div class="section-header text-center fade-up mbti-header-custom">
+                        <div class="mbti-badge">FARMING MBTI</div>
+                        <h2 class="section-main-title">농사 성향 테스트</h2>
+                        <p class="section-subtitle">나는 어떤 농사꾼일까? 재미로 알아보는 농업 MBTI</p>
+                    </div>
+
+                    <div id="mbti-question-list" class="mbti-list">
+                        <!-- 질문 리스트 동적 렌더링 -->
+                    </div>
+
+                    <div id="submit-container" class="text-center farmtalk-submit-container">
+                        <button type="button" class="mbti-btn-submit" onclick="calculateMBTI()">결과 확인하기</button>
+                    </div>
+
+                    <div id="mbti-result-area" class="mbti-result-area mbti-result-hidden">
+                        <!-- 결과 내용 동적 렌더링 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 2. 나의 작물 찾기 탭 영역 -->
+        <div id="crop-test" class="tab-content-area" style="display: none;">
+            <section class="section farmtalk-form-section">
+                <div class="container">
+                    <div class="section-header text-center fade-up mbti-header-custom">
+                        <div class="mbti-badge" style="background-color: #2b5742; color: #ffffff;">MY CROP FINDER</div>
+                        <h2 class="section-main-title">나의 작물 찾기 테스트</h2>
+                        <p class="section-subtitle">나의 라이프스타일과 공간에 꼭 맞는 최적의 추천 작물은?</p>
+                    </div>
+
+                    <div id="crop-question-list" class="mbti-list">
+                        <!-- 질문 리스트 동적 렌더링 -->
+                    </div>
+
+                    <div id="crop-submit-container" class="text-center farmtalk-submit-container">
+                        <button type="button" class="mbti-btn-submit" onclick="calculateCrop()">추천 작물 확인하기</button>
+                    </div>
+
+                    <div id="crop-result-area" class="mbti-result-area mbti-result-hidden">
+                        <!-- 결과 내용 동적 렌더링 -->
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">
@@ -52,10 +118,11 @@
             <div class="footer-right">
                 <div class="footer-nav">
                     <ul>
-                        <li><a href="about.html">회사소개</a></li>
-                        <li><a href="products.html">제품소개</a></li>
-                        <li><a href="brand.html">브랜드</a></li>
-                        <li><a href="bathhouse.html">의흥목욕탕</a></li>
+                        <li><a href="farmio.html">FarmIO</a></li>
+                        <li><a href="farmtech.html">FARM TECH</a></li>
+                        <li><a href="farmlife.html">FARM LIFE</a></li>
+                        <li><a href="bathhouse.html">FarmIO X 의흥목욕탕</a></li>
+                        <li><a href="farmtalk.html">FARM TALK</a></li>
                     </ul>
                 </div>
                 <div class="footer-legal">
@@ -87,5 +154,7 @@
     </footer>
     <button id="scrollToTopBtn" class="scroll-to-top" aria-label="최상단으로 이동">&uarr;</button>
     <script src="script.js"></script>
+    <script src="farmlife.js"></script>
 </body>
+
 </html>
