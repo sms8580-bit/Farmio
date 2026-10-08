@@ -107,20 +107,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // R&D / Project View Button Click Handler
-    const rdTrigger = document.getElementById('rdProjectTabTrigger');
-    if (rdTrigger) {
-        rdTrigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            const rdTabItem = document.querySelector('.sub-category-item[href="#rd-project"]');
-            if (rdTabItem) {
-                rdTabItem.click();
-                const subCatBar = document.querySelector('.sub-category-bar');
-                if (subCatBar) {
-                    window.scrollTo({ top: subCatBar.offsetTop - 90, behavior: 'smooth' });
-                }
-            }
+    // Bathhouse Image Slider Logic (Multiple Sliders Support)
+    const sliderWraps = document.querySelectorAll('.bathhouse-slider-wrap');
+    sliderWraps.forEach((sliderWrap) => {
+        const track = sliderWrap.querySelector('.slider-track');
+        const slides = sliderWrap.querySelectorAll('.slide-item');
+        const prevBtn = sliderWrap.querySelector('.prev-btn');
+        const nextBtn = sliderWrap.querySelector('.next-btn');
+        const dots = sliderWrap.querySelectorAll('.slider-dots .dot');
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        if (!track || slides.length === 0) return;
+
+        function updateSlider(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            currentIndex = index;
+
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentIndex);
+            });
+        }
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideInterval = setInterval(() => {
+                updateSlider(currentIndex + 1);
+            }, 4000);
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideInterval) clearInterval(autoSlideInterval);
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                updateSlider(currentIndex - 1);
+                startAutoSlide();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                updateSlider(currentIndex + 1);
+                startAutoSlide();
+            });
+        }
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                updateSlider(idx);
+                startAutoSlide();
+            });
         });
-    }
+
+        sliderWrap.addEventListener('mouseenter', stopAutoSlide);
+        sliderWrap.addEventListener('mouseleave', startAutoSlide);
+
+        startAutoSlide();
+    });
 });
 
