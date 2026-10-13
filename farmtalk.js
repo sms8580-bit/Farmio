@@ -438,14 +438,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const trStyle = (post.authorRaw === '팜이오 관리자') ? 'background-color: #f8fbfa; font-weight: 500;' : '';
 
             tr.innerHTML = `
-                <td style="${trStyle}">${post.id}</td>
-                <td style="${trStyle}"><span class="board-badge badge-${getBadgeClass(post.category)}">${post.category}</span></td>
+                <td class="col-num" style="${trStyle}">${post.id}</td>
+                <td class="col-cat" style="${trStyle}"><span class="board-badge badge-${getBadgeClass(post.category)}">${post.category}</span></td>
                 <td class="col-title-td" style="${trStyle}">
                     <a href="#" class="board-title-link" data-id="${post.id}">${titleHtml}${commentCount}</a>
                 </td>
-                <td style="${trStyle}">${displayAuthor}</td>
-                <td style="${trStyle}">${post.date}</td>
-                <td style="${trStyle}">${post.views || 0}</td>
+                <td class="col-author" style="${trStyle}">${displayAuthor}</td>
+                <td class="col-date" style="${trStyle}">${post.date}</td>
+                <td class="col-views" style="${trStyle}">${post.views || 0}</td>
+                <td class="col-mobile-meta" style="${trStyle}">
+                    <span class="mo-author">${displayAuthor}</span>
+                    <span class="mo-divider">·</span>
+                    <span class="mo-date">${post.date}</span>
+                    <span class="mo-divider">·</span>
+                    <span class="mo-views">조회 ${post.views || 0}</span>
+                </td>
             `;
             boardTableBody.appendChild(tr);
         });
@@ -457,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        const paginationContainer = document.querySelector('.pagination');
+        const paginationContainer = document.querySelector('.board-pagination') || document.querySelector('.pagination');
         if (paginationContainer) {
             paginationContainer.innerHTML = '';
             

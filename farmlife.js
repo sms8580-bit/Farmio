@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mbtiQuestions.forEach((q, index) => {
             html += `
                 <div class="mbti-question-card" id="q-card-${index}">
-                    <div class="mbti-q-num" style="color: #65b891; font-size: 1.8rem; font-weight: 900; margin-bottom: 10px; letter-spacing: -1px;">Q${index + 1}</div>
+                    <div class="mbti-q-num">Q${index + 1}</div>
                     <div class="mbti-q-title">${q.q}</div>
                     
                     <div class="mbti-scale-container">
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cropQuestions.forEach((q, index) => {
             html += `
                 <div class="mbti-question-card" id="cq-card-${index}">
-                    <div class="mbti-q-num" style="color: #4a8c6f; font-size: 1.8rem; font-weight: 900; margin-bottom: 10px; letter-spacing: -1px;">Q${index + 1}</div>
+                    <div class="mbti-q-num crop-q-num">Q${index + 1}</div>
                     <div class="mbti-q-title">${q.q}</div>
                     
                     <div class="mbti-scale-container">
@@ -165,7 +165,7 @@ function calculateMBTI() {
             <span class="result-type-label">나의 MBTI 농사 성향은?</span>
             <h1 class="result-title">${res.title}</h1>
             <div class="result-desc">${res.desc}</div>
-            <button class="mbti-outline-btn mt-4" style="margin-top:40px;" onclick="location.reload();">테스트 다시하기</button>
+            <button class="mbti-outline-btn mt-4" onclick="location.reload();">테스트 다시하기</button>
         `;
         resultArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -213,9 +213,9 @@ function calculateCrop() {
         resultArea.innerHTML = `
             <span class="result-type-label">나에게 어울리는 최고의 작물은?</span>
             <h1 class="result-title">${res.name}</h1>
-            <h3 style="color:#111; font-size:1.3rem; font-weight:700; margin-bottom:15px;">"${res.title}"</h3>
+            <h3 class="crop-result-subtitle">"${res.title}"</h3>
             <div class="result-desc">${res.desc}</div>
-            <button class="mbti-outline-btn mt-4" style="margin-top:40px;" onclick="location.reload();">테스트 다시하기</button>
+            <button class="mbti-outline-btn mt-4" onclick="location.reload();">테스트 다시하기</button>
         `;
         resultArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
